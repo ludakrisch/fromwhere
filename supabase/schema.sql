@@ -1,11 +1,13 @@
 -- Artists
+
 create table artists (
   id serial primary key,
-  name text not null,
-  is_group boolean default false,
-  group_name text,
+  name text not null,                     -- Name des Einzelkünstlers oder der Gruppe
+  is_group boolean default false,         -- true = Gruppe, false = Einzelperson
   created_at timestamp with time zone default now()
 );
+
+
 -- Artist Locations
 create table artist_locations (
   id serial primary key,
